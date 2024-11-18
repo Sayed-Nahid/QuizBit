@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Question, Student
-from .serializers import QuestionSerializer
+from .serializers import QuestionSerializer, StudentSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
@@ -21,3 +21,9 @@ def submit_quiz(request):
     student.status = "done"
     student.save()
     return Response({"You Have Completed the Quiz. See you in Leaderboard."})
+
+@api_view(['GET'])
+def quiz_history(request):
+    history = Student.objects.all()
+    serializer = StudentSerializer(history, many=True)
+    return Response(serializer.data)
