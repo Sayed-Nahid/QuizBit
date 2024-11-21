@@ -10,12 +10,12 @@ The following tools needs to be installed on the system
 ### Steps to Set Up the Project
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Sayed-Nahid/team-collab-api.git
+   https://github.com/Sayed-Nahid/QuizBit.git
    ```
    
 2. **Navigate to the Cloned Repository**
    ```bash
-   cd team-collab-api
+   cd QuizBit
    ```
 
 3. **Create a Python Virtual Environment**
